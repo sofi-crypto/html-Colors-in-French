@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Imperial+Script&display=swap');
+body{
+    margin: -25px;
+    background-color: rgb(250, 247, 244);
+    max-width: 100%;
+    overflow-x: hidden
+}
+
+*{
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+ul{
+    margin-left: 40px;
+    margin-top: 40px;
+    list-style-type: none;
+    list-style-type: disc;
+    list-style-position:inside;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    padding-left: 10px;
+}
+
+li{
+    margin-top: 10px;
+    font-size: 35px;
+     padding-left: 0px;
+     font-family: "Elms Sans", sans-serif;
+     position: relative;
+}
+
+h1{
+    color: rgb(138, 6, 6);
+    font-size: 70px;
+    margin-bottom: 15px;
+    margin-left: 70px;
+    font-family: "Imperial Script", cursive;
+    height: 70px;
+}
+
+h2{
+    color: rgb(7, 13, 75);
+    font-size: 50px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    margin-left: 50px;
+    font-family: "Cormorant", serif;
+}
+
+p{
+    color: rgb(3, 6, 43);
+    font-size: 17px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    text-indent: 0px;
+    font-family: "Elms Sans", sans-serif;
+    text-align: center;
+}
+
+h2.colorida {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 50px;
+    margin-top: 30px;
+    margin-left: 50px;
+    font-family: "Cormorant", serif;
+    height: 20px;
+}
+
+.colorida span:nth-child(1) { color: #850202; } 
+.colorida span:nth-child(2) { color: #cab80f; } 
+.colorida span:nth-child(3) { color: #04691d; } 
+.colorida span:nth-child(4) { color: #071d7e; } 
+.colorida span:nth-child(5) { color: #ec96e5; } 
+.colorida span:nth-child(6) { color: #f3b353; } 
+
+.color-text[value = "1"] {
+    color: #850202;
+}
+.color-text[value = "2"] {
+    color: #cab80f;
+}
+.color-text[value = "3"] {
+    color: #04691d;
+}    
+.color-text[value = "4"] {
+    color: #071d7e;
+}
+.color-text[value = "5"] {
+    color: #ec96e5;
+}
+.color-text[value = "6"] {
+    color: #f3b353;
+}
+
+img{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    mix-blend-mode: multiply;
+
+    
+}
+
+@keyframes sway{
+    0%, 100%{
+        transform: translatey(-50%) rotate(0deg) translateX(0);
+    }
+    50%{
+        transform: translatey(-50%) rotate(5deg) translateX(5px);
+    }
+}
+
+h2.colorida::before {
+            content: "" !important; 
+            position: absolute !important;
+            right: -20px !important;
+            top: 40px;
+            width: 40px !important;
+            height: 30px !important;
+            transform: translateY(-55%);
+            background-size: contain !important;
+            background-repeat: no-repeat !important;
+            background-image: url('./assets/mouse.png') !important;
+            animation: sway 3s infinite !important;
+           
+        }
+
+        @keyframes fade {
+    0%, 100% { opacity: 1; } 
+    50% { opacity: 0.3; } 
+}
+
+h1::before {
+            content: "" !important; 
+            position: absolute !important;
+            right: -60px !important;
+            top: -30px;
+            width: 60px !important;
+            height: 60px !important;
+            transform: translateY(-55%) !important;
+            background-size: contain !important;
+            background-repeat: no-repeat !important;
+            background-image: url('./assets/brilho.png') !important;
+            animation: fade 1.5s infinite !important;
+            rotate: -180deg;
+            
+        }
+       
+h1::after {
+            content: "" !important; 
+            position: absolute !important;
+            left: -50px;
+            top: 50px;
+            width: 60px !important;
+            height: 60px !important;
+            transform: translateY(-55%) !important;
+            background-size: contain !important;
+            background-repeat: no-repeat !important;
+            background-image: url('./assets/brilho.png') !important;
+            animation: fade 1.5s infinite !important;
+             
+        }
+        h1, h2.colorida {
+  position: relative; 
+  display: inline-block; 
+}
